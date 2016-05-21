@@ -1,0 +1,6 @@
+2016-04-25 16:31:40,839
+Level: ERROR
+Exception: System.DivideByZeroException: Det gjordes ett försök att dividera med noll.
+   vid STMp3MVVM.Helpers.TrackFinder.GetTrackInfo(String uri) i C:\Users\johne\Documents\Visual Studio 2015\Projects\c#\STMp3MVVM\STMp3MVVM\STMp3MVVM\Helpers\TrackFinder.cs:rad 21
+Message: Fel när information om låten skulle hämtas.
+
