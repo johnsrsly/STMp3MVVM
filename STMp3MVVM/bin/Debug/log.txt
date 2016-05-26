@@ -1,0 +1,91 @@
+2016-04-25 16:31:40,839
+Level: ERROR
+Exception: System.DivideByZeroException: Det gjordes ett försök att dividera med noll.
+   vid STMp3MVVM.Helpers.TrackFinder.GetTrackInfo(String uri) i C:\Users\johne\Documents\Visual Studio 2015\Projects\c#\STMp3MVVM\STMp3MVVM\STMp3MVVM\Helpers\TrackFinder.cs:rad 21
+Message: Fel när information om låten skulle hämtas.
+
+2016-05-25 15:28:25,889
+Level: ERROR
+Exception: System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte att det lyckades: 403 (Forbidden).
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.VideoClient.<GetBytesAsync>d__10.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.Video.<GetBytesAsync>d__11.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   vid STMp3MVVM.Helpers.VideoDownloader.<GetVideo>d__1.MoveNext() i C:\Users\johne\Documents\GitHub\STMp3MVVM\STMp3MVVM\Helpers\VideoDownloader.cs:rad 22
+Message: Fel när en video skulle laddas ner.
+
+2016-05-25 15:28:34,353
+Level: ERROR
+Exception: System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte att det lyckades: 403 (Forbidden).
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.VideoClient.<GetBytesAsync>d__10.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.Video.<GetBytesAsync>d__11.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   vid STMp3MVVM.Helpers.VideoDownloader.<GetVideo>d__1.MoveNext() i C:\Users\johne\Documents\GitHub\STMp3MVVM\STMp3MVVM\Helpers\VideoDownloader.cs:rad 22
+Message: Fel när en video skulle laddas ner.
+
+2016-05-25 15:33:16,731
+Level: ERROR
+Exception: System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte att det lyckades: 403 (Forbidden).
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.VideoClient.<GetBytesAsync>d__10.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.Video.<GetBytesAsync>d__11.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   vid STMp3MVVM.Helpers.VideoDownloader.<GetVideo>d__1.MoveNext() i C:\Users\johne\Documents\GitHub\STMp3MVVM\STMp3MVVM\Helpers\VideoDownloader.cs:rad 22
+Message: Fel när en video skulle laddas ner.
+
+2016-05-25 15:34:21,653
+Level: ERROR
+Exception: System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte att det lyckades: 403 (Forbidden).
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.VideoClient.<GetBytesAsync>d__10.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.Video.<GetBytesAsync>d__11.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   vid STMp3MVVM.Helpers.VideoDownloader.<GetVideo>d__1.MoveNext() i C:\Users\johne\Documents\GitHub\STMp3MVVM\STMp3MVVM\Helpers\VideoDownloader.cs:rad 22
+Message: Fel när en video skulle laddas ner.
+
+2016-05-25 15:37:25,137
+Level: ERROR
+Exception: System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte att det lyckades: 403 (Forbidden).
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.VideoClient.<GetBytesAsync>d__10.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid VideoLibrary.Video.<GetBytesAsync>d__11.MoveNext()
+--- Slut på stackspårningen från föregående plats där ett undantag utlöstes ---
+   vid System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   vid System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   vid STMp3MVVM.Helpers.VideoDownloader.<GetVideo>d__1.MoveNext() i C:\Users\johne\Documents\GitHub\STMp3MVVM\STMp3MVVM\Helpers\VideoDownloader.cs:rad 22
+Message: Fel när en video skulle laddas ner.
+
