@@ -149,7 +149,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\AddToDownloadListCommand.cs" />
     <Compile Include="Commands\ChangeSavePathCommand.cs" />
+    <Compile Include="Commands\DownloadDownloadListCommand.cs" />
     <Compile Include="Commands\OpenFolderCommand.cs" />
     <Compile Include="Commands\OpenSettingsCommand.cs" />
     <Compile Include="Commands\SearchCommand.cs" />

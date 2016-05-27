@@ -25,7 +25,7 @@ namespace STMp3MVVM.Commands
 
         public void Execute(object parameter)
         {
-            _mainWindowViewModel.FindVideo();
+            _mainWindowViewModel.FindVideo(_mainWindowViewModel.Track);
         }
     }
 }

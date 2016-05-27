@@ -17,8 +17,11 @@ namespace STMp3MVVM.ViewModels
     {
         private readonly TrackFinder _trackFinder = new TrackFinder();
         public List<SearchResult> YoutubeSearchResults { get; set; }
-        private ObservableCollection<Track> _spotifySearchResults;
+        private ObservableCollection<Track> _spotifySearchResults = new ObservableCollection<Track>();
+        private ObservableCollection<Track> _downloadList = new ObservableCollection<Track>();
 
+        public ICommand DownloadDownloadListCommand { get; private set; }
+        public ICommand AddToDownloadListCommand { get; private set; }
         public ICommand SetTrackCommand { get; private set; }
         public ICommand SearchCommand { get; private set; }
         public ICommand ChangeSavePathCommand { get; private set; }
@@ -27,6 +30,7 @@ namespace STMp3MVVM.ViewModels
         public ICommand DownloadCommand { get; private set; }
         public bool CanDownload => !string.IsNullOrEmpty(Track.Artists);
         public bool CanSearch => !string.IsNullOrEmpty(SearchStr);
+        public bool CanAddToDownloadList => SpotifySearchResults.Count > 0;
 
         public event EventHandler NoMatchEvent;
         public event EventHandler OpenSettingsEvent;
@@ -36,6 +40,7 @@ namespace STMp3MVVM.ViewModels
         private double _progressbarValue;
         private string _searchStr= "Sök efter en låt här!";
 
+
         public MainViewModel()
         {
             DownloadCommand = new TrackDownloadCommand(this);
@@ -44,6 +49,18 @@ namespace STMp3MVVM.ViewModels
             ChangeSavePathCommand = new ChangeSavePathCommand(this);
             SearchCommand = new SearchCommand(this);
             SetTrackCommand = new SetTrackCommand(this);
+            AddToDownloadListCommand = new AddToDownloadListCommand(this);
+            DownloadDownloadListCommand = new DownloadDownloadListCommand(this);
+        }
+
+        public ObservableCollection<Track> DownloadList
+        {
+            get { return _downloadList; }
+            set
+            {
+                _downloadList = value;
+            }
+            
         }
 
         public ObservableCollection<Track> SpotifySearchResults
@@ -133,13 +150,13 @@ namespace STMp3MVVM.ViewModels
             }
         }
 
-        public async void FindVideo()
+        public async Task FindVideo(Track track)
         {
             _downloadStatus.Clear();
             var videoFinder = new VideoFinder();
 
             DownloadStatus = "Letar efter matchning.";
-            var videoId = await videoFinder.GetMatchingVideoId(Track);
+            var videoId = await videoFinder.GetMatchingVideoId(track);
             if (videoId != null)
             {
                 DownloadVideo(videoId);
@@ -185,6 +202,21 @@ namespace STMp3MVVM.ViewModels
             SpotifySearchResults = _trackFinder.GetTracksFromSearch(searchStr);
         }
 
+        public void AddToDownloadList(Track track)
+        {
+            DownloadList.Add(track);
+            OnPropertyChanged("DownloadList");
+        }
+
+        public async void DownloadDownloadList()
+        {
+            foreach (var track in DownloadList)
+            {
+                DownloadStatus = "";
+                await FindVideo(track);
+            }
+
+        }
 
     }
 }

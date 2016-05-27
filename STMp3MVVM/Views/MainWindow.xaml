@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
-        Title="SpotifyToMp3" Height="689.706" Width="508" WindowStyle="None" Background="#FF2E2E2E" ResizeMode="CanMinimize" BorderBrush="#FF3E3E3E" BorderThickness="1">
+        Title="SpotifyToMp3" Height="735.706" Width="857" WindowStyle="None" Background="#FF2E2E2E" ResizeMode="CanMinimize" BorderBrush="#FF3E3E3E" BorderThickness="1">
     <Window.Resources>
         <ResourceDictionary Source="StyleResources.xaml"/>
     </Window.Resources>
 
-    <Grid Height="690" VerticalAlignment="Top" Margin="0,0,0,-2">
+    <Grid Height="738" VerticalAlignment="Top" HorizontalAlignment="Left" Width="857" Margin="0,0,-2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btnDownload" Command="{Binding DownloadCommand}" Content="Ladda ner" HorizontalAlignment="Left" Margin="423,91,0,0" VerticalAlignment="Top" Width="73" Background="#FF5D5D5D" Height="20" BorderBrush="Black" Foreground="#FFEAEAEA"/>
-        <Button x:Name="btnClose" Style="{DynamicResource ResourceKey=BtnNoBorder}" Content="X" HorizontalAlignment="Left" Margin="463,2,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF2E2E2E" BorderBrush="{x:Null}" Foreground="#FFEAEAEA" FontSize="17.333" Click="btnClose_Click" FontWeight="Medium"/>
-        <Button x:Name="btnMinimize" Style="{DynamicResource ResourceKey=BtnNoBorder}" Content="-" Margin="423,2,0,0" VerticalAlignment="Top" Height="28" Background="#FF2E2E2E" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="40" Foreground="#FFEAEAEA" FontSize="24" FontWeight="Medium" Click="btnMinimize_Click"/>
-        <Border x:Name="borderTop" BorderThickness="1" HorizontalAlignment="Center" Height="29" VerticalAlignment="Top" Width="418" MouseDown="Border_MouseDown" Margin="0,0,88,0">
-            <Label x:Name="lblWindowName" Content=" SpotifyToMp3" Margin="25,0,-1,-1" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Foreground="#FFEAEAEA" Width="392">
+        <Button x:Name="btnClose" Style="{DynamicResource ResourceKey=BtnNoBorder}" Content="X" HorizontalAlignment="Left" Margin="813,1,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF2E2E2E" BorderBrush="{x:Null}" Foreground="#FFEAEAEA" FontSize="17.333" Click="btnClose_Click" FontWeight="Medium"/>
+        <Button x:Name="btnMinimize" Style="{DynamicResource ResourceKey=BtnNoBorder}" Content="-" Margin="773,1,0,0" VerticalAlignment="Top" Height="28" Background="#FF2E2E2E" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="40" Foreground="#FFEAEAEA" FontSize="24" FontWeight="Medium" Click="btnMinimize_Click"/>
+        <Border x:Name="borderTop" BorderThickness="1" HorizontalAlignment="Center" Height="29" VerticalAlignment="Top" Width="383" MouseDown="Border_MouseDown" Margin="33,0,441,0">
+            <Label x:Name="lblWindowName" Content=" SpotifyToMp3" Margin="-1,-1,0,0" Height="28" VerticalAlignment="Top" Foreground="#FFEAEAEA" HorizontalAlignment="Center">
                 <Label.Background>
                     <SolidColorBrush Color="#FF404040" Opacity="0"/>
                 </Label.Background>
@@ -28,13 +28,13 @@
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="29" Margin="10,57,0,0" VerticalAlignment="Top" Width="486" CornerRadius="3" BorderBrush="#FF5D5D5D" AllowDrop="True" Drop="Border_Drop" Background="#FF232323">
             <Label x:Name="lblDrop" AllowDrop="True" Content="{Binding Track.SongAndArtists}" Margin="-1" HorizontalContentAlignment="Center" Background="{x:Null}" VerticalAlignment="Center" Foreground="#FFEAEAEA"/>
         </Border>
-        <Border x:Name="lblProgressBorder" BorderThickness="1" Margin="231,116,10,0" CornerRadius="3" Height="182" VerticalAlignment="Top" BorderBrush="#FF5D5D5D" Background="#FF232323">
+        <Border x:Name="lblProgressBorder" BorderThickness="1" Margin="231,116,0,0" CornerRadius="3" Height="182" VerticalAlignment="Top" BorderBrush="#FF5D5D5D" Background="#FF232323" HorizontalAlignment="Left" Width="265">
             <TextBox Text="{Binding DownloadStatus}" x:Name="tbProgress" TextWrapping="Wrap" Margin="0" FontSize="13.333" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" IsUndoEnabled="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextChanged="tbProgress_TextChanged" Foreground="#FFEAEAEA"/>
         </Border>
         <Border x:Name="pbBorder" BorderThickness="1" CornerRadius="3" HorizontalAlignment="Left" Height="20" Margin="231,91,0,0" VerticalAlignment="Top" Width="187" BorderBrush="#FF5D5D5D" Background="#FF232323">
-            <ProgressBar Value="{Binding ProgressbarValue}" x:Name="pb" Margin="0.5" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Foreground="#FF264622" Background="{x:Null}" Style="{DynamicResource ProgressBarRoundedCorners}"/>
+            <ProgressBar Value="{Binding ProgressbarValue}" x:Name="pb" Margin="1" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Foreground="#FF264622" Background="{x:Null}" Style="{DynamicResource ProgressBarRoundedCorners}"/>
         </Border>
-        <Border CornerRadius="3"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,91,280,0" Width="216" Height="207">
+        <Border CornerRadius="3"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,91,0,0" Width="216" Height="207">
             <Grid Margin="0">
                 <Border Name="mask" Background="#FF2E2E2E" CornerRadius="5"/>
                 <StackPanel>
@@ -45,7 +45,7 @@
                 </StackPanel>
             </Grid>
         </Border>
-        <Separator Height="6" Margin="0,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="506" Background="#FF3E3E3E"/>
+        <Separator Height="6" Margin="0,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="855" Background="#FF3E3E3E"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Margin="3,3.5,0,0" Source="/STMp3MVVM;component/logo_1948848_web.ico"/>
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="18" Margin="0,34,0,0" VerticalAlignment="Top" Background="{x:Null}">
             <MenuItem Foreground="#FFEAEAEA" Header="Alternativ">
@@ -53,11 +53,11 @@
                 <MenuItem Command="{Binding OpenFolderCommand}" x:Name="miOpenFolder" Background="#FF2E2E2E" Header="Öppna mapp"/>
             </MenuItem>
         </Menu>
-        <Border x:Name="tbSearchBorder" BorderThickness="1" CornerRadius="3" HorizontalAlignment="Left" Height="31" Margin="10,303,0,0" VerticalAlignment="Top" Width="187" BorderBrush="#FF5D5D5D" Background="#FF232323">
+        <Border x:Name="tbSearchBorder" BorderThickness="1" CornerRadius="3" HorizontalAlignment="Left" Height="31" Margin="10,303,0,0" VerticalAlignment="Top" Width="406" BorderBrush="#FF5D5D5D" Background="#FF232323">
             <TextBox x:Name="tbSearch" Margin="2" TextWrapping="Wrap" Text="{Binding SearchStr, UpdateSourceTrigger=PropertyChanged}" SelectionBrush="{x:Null}" Foreground="#FFEAEAEA" FontSize="18" GotFocus="tbSearch_GotFocus"/>
         </Border>
-        <Border x:Name="lwSearchResultsBorder" BorderThickness="1" Margin="10,339,10,0" CornerRadius="3" Height="341" VerticalAlignment="Top" BorderBrush="#FF5D5D5D" Background="#FF232323">
-            <ListView x:Name="lwSearchResults" ItemsSource="{Binding SpotifySearchResults}" Margin="0" Background="{x:Null}" Foreground="#FFEAEAEA" BorderBrush="{x:Null}" SelectionMode="Single">
+        <Border x:Name="lwSearchResultsBorder" BorderThickness="1" Margin="10,339,0,0" CornerRadius="3" Height="341" VerticalAlignment="Top" BorderBrush="#FF5D5D5D" Background="#FF232323" HorizontalAlignment="Left" Width="486">
+            <ListView x:Name="lwSearchResults" ItemsSource="{Binding SpotifySearchResults}" Margin="1,-1,-1,1" Background="{x:Null}" Foreground="#FFEAEAEA" BorderBrush="{x:Null}" SelectionMode="Single">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <i:InvokeCommandAction Command="{Binding SetTrackCommand}" CommandParameter="{Binding ElementName=lwSearchResults, Path=SelectedItem}" />
@@ -72,7 +72,18 @@
                 </ListView.View>
             </ListView>
         </Border>
-        <Button x:Name="searchBtn" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=tbSearch, Path=Text}" IsDefault="{Binding ElementName=tbSearch, Path=IsKeyboardFocused}" Content="Sök" HorizontalAlignment="Left" Margin="202,303,0,0" VerticalAlignment="Top" Width="75" Height="31" Foreground="#FFEAEAEA"/>
-
+        <Button x:Name="searchBtn" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=tbSearch, Path=Text}" IsDefault="{Binding ElementName=tbSearch, Path=IsKeyboardFocused}" Content="Sök" HorizontalAlignment="Left" Margin="421,303,0,0" VerticalAlignment="Top" Width="75" Height="31" Foreground="#FFEAEAEA"/>
+        <Border x:Name="lwDownloadListBorder" BorderThickness="1" Margin="501,57,0,0" CornerRadius="3" Height="277" VerticalAlignment="Top" BorderBrush="#FF5D5D5D" Background="#FF232323" HorizontalAlignment="Left" Width="331">
+            <ListView x:Name="lwDownloadList" ItemsSource="{Binding DownloadList}"  Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFEAEAEA">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Låt" DisplayMemberBinding="{Binding Name}" Width="162"/>
+                        <GridViewColumn Header="Artists" DisplayMemberBinding="{Binding Artists}" Width="162"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+        <Button x:Name="btnAddToDownloadList" Command="{Binding AddToDownloadListCommand}" CommandParameter="{Binding ElementName=lwSearchResults, Path=SelectedItem}" Content="Lägg till i nedladdningslista" HorizontalAlignment="Left" Height="42" Margin="10,685,0,-37" VerticalAlignment="Top" Width="486" Foreground="#FFEAEAEA"/>
+        <Button x:Name="btnDownloadListDownload" Command="{Binding DownloadDownloadListCommand}" Content="Download from list" HorizontalAlignment="Left" Margin="501,341,0,0" VerticalAlignment="Top" Width="129" Foreground="#FFEAEAEA" Height="29"/>
     </Grid>
 </Window>
